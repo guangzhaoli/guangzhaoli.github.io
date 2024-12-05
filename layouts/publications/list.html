@@ -1,0 +1,64 @@
+{{ define "main" }}
+  <!-- 引用自定义CSS -->
+  <link rel="stylesheet" href="/css/publications.css">
+
+  <!-- 外部容器 -->
+  <div class="container">
+    <h1>Publications</h1>
+    <p class="anno"><strong>* :</strong> co-author, <strong>☥ :</strong> corresponding author</p>
+
+  </br></br>
+    <div class="publications">
+      {{ range .Pages }}
+        <div class="publication-item">
+          <img src="{{ .Params.image }}" alt="Publication Image" class="publication-image" />
+          <div class="publication-details">
+            <h3>{{ .Title }}</h3>
+            <div>
+              {{ $coauthors := .Params.coauthors | default (slice) }}
+              {{ $correspondingAuthor := .Params.corresponding_author }}
+              <p class="author-list">
+                {{ $n := sub (len .Params.authors) 1 }}
+                {{ range $index, $author := .Params.authors }}
+                  {{ $isCoAuthor := in $coauthors $author }}
+                  {{ $isCorresponding := eq $author $correspondingAuthor }}
+                  {{ if eq $author "Guangzhao Li" }}
+                    <strong>{{ $author }}</strong>
+                  {{ else }}
+                    {{ $author }}
+                  {{ end }}
+                  {{ if $isCoAuthor }}<sup>*</sup>{{ end }}
+                  {{ if $isCorresponding }}<sup>☥</sup>{{ end }}
+                  {{ if lt $index $n }}, {{ end }}
+                {{ end }}
+              </p>       
+            </div>
+              <p><em>{{ .Params.preprint }}</em></p>
+              <p>
+              [<a href="{{ .Params.links.paper }}">paper</a>]
+              [<a href="{{ .Params.links.code }}">code</a>]
+              [<a href="{{ .Params.links.project }}">project page</a>]
+              [<a href="javascript:void(0);" onclick="copyBibTex('{{ .Params.bibtex }}')">bibtex</a>]
+            </p>
+          </div>
+          
+        </div>
+      {{ end }}
+    </div>
+  </div>
+
+<!-- JavaScript to handle the copy functionality -->
+<script>
+  function copyBibTex(bibtex) {
+    // Create a temporary textarea element to hold the BibTeX text
+    const textarea = document.createElement('textarea');
+    document.body.appendChild(textarea);
+    textarea.value = bibtex;
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+    alert('BibTeX copied to clipboard!');
+  }
+</script>
+
+{{ end }}
