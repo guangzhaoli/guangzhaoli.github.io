@@ -1,0 +1,146 @@
+{{ define "main" }}
+<link rel="stylesheet" href="/css/cv.css">  
+
+<div class="cv-container">
+    <div class="cv-header">
+        <h1>Curriculum Vitae</h1>
+        <a href="/cv/LiGuangzhao_CV.pdf" class="download-btn" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Download PDF
+        </a>
+    </div>
+
+    <section class="cv-section education-section">
+        <h2>Education</h2>
+        {{ range .Site.Data.education.universities }}
+        <div class="education-card">
+            <div class="edu-left">
+                <div class="university-logo">
+                    <img src="{{ .logo }}" alt="{{ .name }} Logo">
+                </div>
+                <div class="edu-timeline">
+                    <span class="timeline-start">{{ .startYear }}</span>
+                    <div class="timeline-line">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-progress"></div>
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <span class="timeline-end">{{ .endYear }}</span>
+                </div>
+            </div>
+            <div class="edu-content">
+                <h3 class="university-name">{{ .name }}</h3>
+                <div class="degree-info">
+                    <span class="degree-name">{{ .degree }}</span>
+                    <span class="location">{{ .location }}</span>
+                </div>
+                <div class="academic-stats">
+                    {{ range .stats }}
+                    <div class="stat-item">
+                        <span class="stat-label">{{ .label }}</span>
+                        <span class="stat-value">{{ .value }}</span>
+                    </div>
+                    {{ end }}
+                </div>
+                <div class="courses-section">
+                    <h4>Core Courses</h4>
+                    <div class="course-grid">
+                        {{ range .courses }}
+                        <div class="course-item">
+                            <span class="course-name">{{ .name }}</span>
+                            <span class="course-score">{{ .score }}</span>
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        {{ end }}
+    </section>
+    
+    <!-- 研究经历 - 新样式 -->
+    <section class="cv-section research-section">
+        <h2>Research Experience</h2>
+        <div class="research-grid">
+            {{ range .Site.Data.research_experience }}
+            <div class="research-card">
+                <div class="card-header">
+                    <h3>{{ .title }}</h3>
+                    <span class="date">{{ .date }}</span>
+                </div>
+                <div class="card-role">{{ .role }}</div>
+                <div class="card-content">
+                    <p class="description">{{ .description }}</p>
+                    <div class="key-achievements">
+                        <h4>Key Achievements:</h4>
+                        <ul>
+                            {{ range .achievements }}
+                            <li>{{ . }}</li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                    {{ if .skills }}
+                    <div class="tech-stack">
+                        {{ range .skills }}
+                        <span class="tech-tag">{{ . }}</span>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </section>
+
+    <!-- 获奖情况 -->
+    <section class="cv-section">
+        <h2>Awards & Honors</h2>
+        <div class="awards-grid">
+            {{ range .Site.Data.awards }}
+            <div class="award-item">
+                <div class="award-icon">🏆</div>
+                <div class="award-content">
+                    <h4>{{ .title }}</h4>
+                    <span class="date">{{ .date }}</span>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </section>
+
+    <!-- 技能 -->
+    <section class="cv-section">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Programming</h3>
+                <div class="skill-items">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">Linux</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Deep Learning</h3>
+                <div class="skill-items">
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">TensorFlow</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Tools</h3>
+                <div class="skill-items">
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">LaTeX</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{{ end }}   

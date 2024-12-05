@@ -1,0 +1,25 @@
+universities:
+  - name: "Central South University"
+    logo: "/images/csu.png"
+    location: "Changsha, China"
+    startYear: "2022"
+    endYear: "Present"
+    degree: "Software Engineering"
+    stats:
+      - label: "GPA"
+        value: "91.99/100"
+      - label: "Rank"
+        value: "8/196"
+    courses:
+      - name: "Advanced Mathematics"
+        score: 100
+      - name: "Linear Algebra"
+        score: 100
+      - name: "Software Engineering"
+        score: 94
+      - name: "Database System"
+        score: 95
+      - name: "Operating System"
+        score: 93
+      - name: "Computer Networks"
+        score: 92

@@ -1,0 +1,193 @@
+/* 时间线容器 */
+.work-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem 0;
+}
+
+/* 时间线项目 */
+.timeline-item {
+    display: flex;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.timeline-status {
+    position: relative;
+    width: 60px;
+    flex-shrink: 0;
+}
+
+.status-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--border);
+    transform: translateX(-50%);
+}
+
+.status-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* 工作卡片样式 */
+.work-card {
+    flex: 1;
+    background: var(--entry);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-left: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.work-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    font-size: 1.4rem;
+    margin: 0 0 1rem;
+}
+
+.card-title a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.card-title a:hover {
+    color: #2196f3;
+}
+
+.card-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    color: var(--secondary);
+    font-size: 0.9rem;
+}
+
+.card-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.card-summary {
+    color: var(--secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    background: var(--code-bg);
+    color: var(--secondary);
+    transition: all 0.2s ease;
+}
+
+.tag:hover {
+    transform: translateY(-1px);
+    background: var(--border);
+}
+
+/* 状态颜色 */
+.timeline-item.ongoing .status-dot {
+    background: #ffd700;
+    box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.2);
+}
+
+.timeline-item.completed .status-dot {
+    background: #4caf50;
+    box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.2);
+}
+
+.timeline-item.planned .status-dot {
+    background: #2196f3;
+    box-shadow: 0 0 0 4px rgba(33, 150, 243, 0.2);
+}
+
+/* 进度条样式 */
+.progress-bar {
+    background: var(--code-bg);
+    height: 8px;
+    border-radius: 4px;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, #2196f3, #4caf50);
+    border-radius: 4px;
+    position: relative;
+}
+
+.progress-text {
+    position: absolute;
+    right: 8px;
+    top: -20px;
+    font-size: 0.8rem;
+    color: var(--secondary);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .timeline-status {
+        width: 40px;
+    }
+    
+    .card-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* 深色模式适配 */
+[theme="dark"] .work-card {
+    background: var(--entry);
+}
+
+[theme="dark"] .progress {
+    background: linear-gradient(90deg, #1976d2, #388e3c);
+}
+
+.post-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.post-title {
+    margin-bottom: 1rem;
+}
+
+.post-description {
+    color: var(--secondary);
+}
+
+/* 其他原有的CSS保持不变 */
+.work-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem 0;
+}

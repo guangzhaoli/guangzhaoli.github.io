@@ -7,6 +7,7 @@ coauthors: [Guangzhao Li, Liangzhen Liu]
 corresponding_author: "Li Kuang"
 preprint: "arXiv preprint:2406.03035, 2024"
 image: "/images/sceneClip.png"
+bibtex: "ttt"
 links:
   paper: "http://example.com/link-to-paper"
   code: "http://example.com/link-to-code"

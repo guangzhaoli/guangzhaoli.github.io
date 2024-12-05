@@ -1,12 +1,12 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Changed 'start' for better clarity */
+  justify-content: flex-start;
   align-items: center;
   min-height: 100vh;
   padding: 20px;
   box-sizing: border-box;
-  max-width: 100%; /* Corrected the property to specify a percentage */
+  max-width: 100%;
 }
 
 .publications {
@@ -18,15 +18,15 @@
 
 .publication-item {
   display: flex;
-  align-items: flex-start; /* Align items to the top */
+  align-items: flex-start;
   gap: 20px;
   max-width: 1000px;
   margin: 0 auto;
 }
 
 .publication-image {
-  max-width: 50%; /* Adjusted image size */
-  width: 100%; /* Ensures image is responsive */
+  max-width: 50%;
+  width: 100%;
   height: auto;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   align-self: center;
@@ -39,33 +39,101 @@
   align-self: center;
 }
 
-.publication-details h3 { /* Corrected from h2 to h3 */
+.publication-details h3 {
   margin-bottom: 0;
 }
 
 .author-list {
-  margin-top: 10px; /* 移除段落默认的上下间距 */
-  margin-bottom: 10px; /* 移除段落默认的上下间距 */
-  line-height: 1.2; /* 调整行高 */
-  letter-spacing: -0.2px; /* 调整字间距，稍微减少 */
-  word-spacing: -1px; /* 缩小字词之间的距离 */
-  font-size: 16px; /* 根据需要调整字体大小 */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  line-height: 1.2;
+  letter-spacing: -0.2px;
+  word-spacing: -1px;
+  font-size: 16px;
 }
 
 .anno {
-  margin-top: 10px; /* 移除段落默认的上下间距 */
-  margin-bottom: 10px; /* 移除段落默认的上下间距 */
-  line-height: 1.2; /* 调整行高 */
-  word-spacing: -1px; /* 缩小字词之间的距离 */
-  font-size: 16px; /* 根据需要调整字体大小 */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  line-height: 1.2;
+  word-spacing: -1px;
+  font-size: 16px;
 }
 
-.publication-details a {
+/* 新添加的按钮和提示样式 */
+.publication-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.link-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
   text-decoration: none;
-  color: #4caf50;
-  font-weight: bold;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-family: inherit;
 }
 
-.publication-details a:hover {
-  text-decoration: underline;
+.link-button svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+}
+
+.link-button.paper {
+  background: #4CAF50;
+}
+
+.link-button.code {
+  background: #2196F3;
+}
+
+.link-button.project {
+  background: #9C27B0;
+}
+
+.link-button.bibtex {
+  background: #FF9800;
+}
+
+.link-button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+}
+
+@media (max-width: 768px) {
+  .publica  tion-links {
+    justify-content: flex-start;
+  }
+}
+
+.hidden {
+  display: none;
 }

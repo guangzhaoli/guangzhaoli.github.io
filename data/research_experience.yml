@@ -1,0 +1,27 @@
+- title: "PDF Bilingual Translation and RAG Q&A"
+  date: "2024.09 - 2024.10"
+  role: "Project Lead"
+  description: "Developed a system for PDF layout analysis and bilingual translation with RAG-enhanced Q&A capabilities."
+  achievements:
+    - "Implemented PDF segmentation model based on MinerU"
+    - "Designed and implemented RAG retrieval enhancement"
+    - "Deployed LLM with fine-tuning for paper translation"
+  skills:
+    - "PyTorch"
+    - "RAG"
+    - "LLM"
+    - "NLP"
+
+- title: "Voice Separation and Timbre Conversion"
+  date: "2024.02 - 2024.06"
+  role: "Project Lead"
+  description: "Created an end-to-end system for song vocal-instrumental separation and voice timbre conversion."
+  achievements:
+    - "Designed UNet-based architecture with Transformer enhancement"
+    - "Achieved state-of-the-art separation quality"
+    - "Won provincial-level competition awards"
+  skills:
+    - "Deep Learning"
+    - "Audio Processing"
+    - "PyTorch"
+    - "Signal Processing"

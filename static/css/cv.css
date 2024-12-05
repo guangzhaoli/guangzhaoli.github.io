@@ -1,0 +1,496 @@
+/* 保持原有的基础样式 */
+.cv-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.cv-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.cv-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background: var(--entry);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+}
+
+.cv-section {
+    margin-bottom: 3rem;
+}
+
+.cv-section h2 {
+    font-size: 1.8rem;
+    color: var(--primary);
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* 新的研究经历卡片样式 */
+.research-section {
+    margin-bottom: 4rem;
+}
+
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.research-card {
+    background: var(--entry);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.research-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    margin-bottom: 1rem;
+}
+
+.card-header h3 {
+    font-size: 1.4rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.card-header .date {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background: var(--code-bg);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--secondary);
+}
+
+.card-role {
+    font-weight: 500;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.card-content {
+    color: var(--secondary);
+}
+
+.description {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.key-achievements {
+    margin-bottom: 1.5rem;
+}
+
+.key-achievements h4 {
+    color: var(--primary);
+    margin-bottom: 0.8rem;
+}
+
+.key-achievements ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.key-achievements li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.key-achievements li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tech-tag {
+    padding: 0.3rem 0.8rem;
+    background: var(--code-bg);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: var(--secondary);
+}
+
+/* 保持原有的其他样式 */
+.education-item {
+    background: var(--entry);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.degree {
+    color: var(--secondary);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.award-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--entry);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.award-icon {
+    font-size: 1.5rem;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.skill-category h3 {
+    margin-bottom: 1rem;
+    color: var(--secondary);
+}
+
+.skill-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    padding: 0.4rem 0.8rem;
+    background: var(--code-bg);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--secondary);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .cv-container {
+        padding: 1rem;
+    }
+    
+    .edu-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .research-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .awards-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .research-card {
+        padding: 1.5rem;
+    }
+}
+
+/* Education部分的CSS样式 */
+.education-section {
+    margin-bottom: 4rem;
+}
+
+.education-card {
+    display: flex;
+    gap: 2.5rem;
+    background: var(--entry);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* 左侧部分优化 */
+.edu-left {
+    flex: 0 0 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.university-logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--primary);
+    padding: 0.5rem;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.education-card:hover .university-logo {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(var(--primary-rgb), 0.2);
+}
+
+/* 时间轴优化 */
+.edu-timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.timeline-line {
+    position: relative;
+    width: 3px;
+    height: 60px;
+    background: var(--border);
+    margin: 0.5rem 0;
+}
+
+.timeline-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    transform-origin: top;
+    animation: progressGrow 1.5s ease-out forwards;
+}
+
+.timeline-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--primary);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline-dot:first-child {
+    top: -6px;
+}
+
+.timeline-dot:last-child {
+    bottom: -6px;
+}
+
+.timeline-start, .timeline-end {
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+/* 右侧内容样式 */
+.edu-content {
+    flex: 1;
+}
+
+.university-name {
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.degree-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.degree-name {
+    font-size: 1.2rem;
+    color: var(--secondary);
+    font-weight: 500;
+}
+
+.location {
+    padding: 0.3rem 1rem;
+    background: var(--code-bg);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--secondary);
+}
+
+/* 学术统计 */
+.academic-stats {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--secondary);
+    text-transform: uppercase;
+}
+
+.stat-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* 课程部分 */
+/* 课程部分优化 */
+.courses-section {
+    margin-top: 2rem;
+}
+
+.courses-section h4 {
+    font-size: 1.1rem;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.courses-section h4::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+}
+
+.course-grid {
+    display: grid;
+    /* 修改为更紧凑的网格布局，一行显示3个 */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.course-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 1rem;
+    background: var(--code-bg);
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.course-item:hover {
+    transform: translateX(5px);
+    background: var(--primary);
+}
+
+.course-name {
+    color: var(--secondary);
+    font-size: 0.9rem; /* 稍微减小字体大小 */
+    transition: color 0.2s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 0.5rem;
+}
+
+.course-score {
+    font-weight: 600;
+    color: var(--primary);
+    transition: color 0.2s ease;
+    flex-shrink: 0;
+}
+
+/* 响应式布局优化 */
+@media (max-width: 1200px) {
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr); /* 中等屏幕显示2列 */
+    }
+}
+
+@media (max-width: 768px) {
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr); /* 小屏幕保持2列 */
+    }
+    
+    .course-item {
+        padding: 0.5rem 0.8rem;
+    }
+    
+    .course-name {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .course-grid {
+        grid-template-columns: 1fr; /* 超小屏幕显示1列 */
+    }
+}
+
+/* 深色模式适配 */
+[theme="dark"] .university-logo {
+    background: var(--entry);
+    border-color: var(--primary);
+}
+
+[theme="dark"] .course-item:hover {
+    background: var(--primary);
+}
