@@ -1,11 +1,10 @@
 {{ define "main" }}
 <!-- 引用自定义CSS -->
 <link rel="stylesheet" href="/css/publications.css">
-
 <div class="container">
   <h1>Publications</h1>
   <p class="anno"><strong>* :</strong> co-author, <strong>☥ :</strong> corresponding author</p>
-  </br></br>
+  </br>
   <div class="publications">
     {{ range .Pages }}
     <div class="publication-item">
@@ -46,7 +45,6 @@
             paper
           </a>
           {{ end }}
-
           {{ with .Params.links.code }}
           <a href="{{ . }}" class="link-button code">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
@@ -57,20 +55,18 @@
             code
           </a>
           {{ end }}
-
           {{ with .Params.links.project }}
           <a href="{{ . }}" class="link-button project">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2">
               <circle cx="12" cy="12" r="10"></circle>
               <line x1="2" y1="12" x2="22" y2="12"></line>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10z">
               </path>
             </svg>
             project page
           </a>
           {{ end }}
-
           {{ if .Params.bibtex }}
           <button class="link-button bibtex" onclick="copyBibTex(`{{ .Params.bibtex }}`)">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
@@ -87,14 +83,12 @@
     {{ end }}
   </div>
 </div>
-
 <script>
   function copyBibTex(bibtex) {
     navigator.clipboard.writeText(bibtex).then(() => {
       showToast('BibTeX copied to clipboard!');
     });
   }
-
   function showToast(message) {
     const toast = document.createElement('div');
     toast.className = 'toast';
