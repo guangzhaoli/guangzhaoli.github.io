@@ -1,0 +1,280 @@
+{% include base_path %}
+
+<!-- start custom head snippets -->
+
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
+
+
+<!-- Support for MatJax -->
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<!-- Custom Publication Styling -->
+<style>
+.publication-entry {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 0.45rem 0 1.35rem;
+}
+
+.publication-entry-media {
+  flex: 0 0 168px;
+}
+
+.publication-entry-media a {
+  display: block;
+  cursor: zoom-in;
+}
+
+.publication-entry-media img {
+  width: 168px;
+  height: 112px;
+  object-fit: cover;
+  display: block;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 10px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.publication-entry-media a:hover img {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+  border-color: rgba(37, 99, 235, 0.26);
+}
+
+.publication-entry-placeholder {
+  width: 168px;
+  height: 112px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 10px;
+  background: linear-gradient(135deg, #f8fafc 0%, #eef4ff 100%);
+  color: #64748b;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.publication-entry-body {
+  min-width: 0;
+  min-height: 112px;
+}
+
+.publication-entry-body p {
+  margin: 0;
+}
+
+.publication-entry-title {
+  color: #0f172a;
+  font-size: 0.98rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.publication-entry-authors {
+  color: #334155;
+  font-size: 0.9rem;
+  line-height: 1.24;
+}
+
+.publication-entry-venue {
+  color: #475569;
+  font-size: 0.87rem;
+  line-height: 1.2;
+}
+
+.publication-entry-links {
+  margin-top: 0.02rem !important;
+  font-size: 0.87rem;
+  line-height: 1.18;
+}
+
+.publication-entry-links a,
+.publication-entry-links span {
+  margin-right: 0.38rem;
+}
+
+.publication-entry-link {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.publication-entry-link:hover {
+  text-decoration: underline;
+}
+
+.publication-entry-link--muted {
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+@media (max-width: 640px) {
+  .publication-entry {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .publication-entry-media {
+    flex-basis: auto;
+    width: 100%;
+  }
+
+  .publication-entry-placeholder {
+    width: 100%;
+    height: 132px;
+  }
+
+  .publication-entry-media img {
+    width: 100%;
+    height: 132px;
+  }
+}
+</style>
+
+<style>
+body {
+  color: #334155;
+}
+
+.page__title,
+.page__content h1,
+.page__content h2,
+.page__content h3,
+.author__name {
+  color: #0f172a;
+}
+
+.page__title {
+  font-size: 1.14rem;
+  line-height: 1.2;
+  margin-bottom: 0.45rem;
+}
+
+.page__content {
+  color: #334155;
+}
+
+.page__content h1 {
+  font-size: 1.14rem;
+  line-height: 1.2;
+  margin-top: 1.3rem;
+  margin-bottom: 0.38rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+.page__content p,
+.page__content li {
+  font-size: 0.9rem;
+  line-height: 1.58;
+  color: #334155;
+}
+
+.page__content p {
+  margin-bottom: 0.55rem;
+}
+
+.page__content ul,
+.page__content ol {
+  margin-top: 0.2rem;
+  margin-bottom: 0.55rem;
+}
+
+.page__content li {
+  margin-bottom: 0.2rem;
+}
+
+.page__content .publication-entry-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.16rem;
+}
+
+.page__content .publication-entry-body p {
+  margin: 0 !important;
+}
+
+.page__content .publication-entry-title {
+  line-height: 1.24 !important;
+}
+
+.page__content .publication-entry-authors,
+.page__content .publication-entry-venue {
+  line-height: 1.2 !important;
+}
+
+.page__content .publication-entry-links {
+  margin-top: 0.04rem !important;
+  line-height: 1.16 !important;
+}
+
+@media (max-width: 640px) {
+  .page__content .publication-entry-body {
+    min-height: auto;
+    justify-content: flex-start;
+    gap: 0.12rem;
+  }
+}
+
+.page__content strong {
+  color: #1e293b;
+}
+
+.page__content a,
+.author__urls a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.page__content a:hover,
+.author__urls a:hover {
+  text-decoration: none;
+  color: #1d4ed8;
+}
+
+.page__content .news-highlight {
+  color: #d63b3b;
+  font-style: italic;
+  font-weight: 600;
+  font-family: "Avenir Next Rounded", "Arial Rounded MT Bold", "Trebuchet MS", "Gill Sans", "Helvetica Neue", sans-serif;
+  letter-spacing: 0.015em;
+}
+
+.page__content .news-venue-link {
+  color: #2563eb;
+  font-style: italic;
+  text-decoration: none;
+}
+
+.page__content .news-venue-link:hover {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.sidebar .author__bio,
+.sidebar .author__desktop,
+.sidebar .author__urls a,
+.sidebar p,
+.sidebar li {
+  color: #475569;
+}
+
+@media (min-width: 48em) {
+  .page__title {
+    font-size: 1.18rem;
+  }
+
+  .page__content h1 {
+    font-size: 1.18rem;
+  }
+}
+</style>
+
+<!-- end custom head snippets -->
