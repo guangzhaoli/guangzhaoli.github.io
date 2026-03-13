@@ -28,6 +28,22 @@ I am a Ph.D. student in Computer Science and Technology at [Shanghai Jiao Tong U
 
 <div class="publication-entry">
   <div class="publication-entry-media">
+    <a href="/images/a2edit.png" aria-label="Preview A2-Edit image">
+      <img src="/images/a2edit.png" alt="A2-Edit preview">
+    </a>
+  </div>
+  <div class="publication-entry-body">
+    <p class="publication-entry-title">A<sup>2</sup>-Edit: Precise Reference-Guided Image Editing of Arbitrary Objects and Ambiguous Masks</p>
+    <p class="publication-entry-authors">Huayu Zheng, <strong>Guangzhao Li</strong>, Baixuan Zhao, Siqi Luo, Hantao Jiang, Guangtao Zhai, Xiaohong Liu<sup>&dagger;</sup></p>
+    <p class="publication-entry-venue">arXiv, 2603.10685</p>
+    <p class="publication-entry-links">
+      <a class="publication-entry-link" href="https://arxiv.org/abs/2603.10685">[paper]</a>
+    </p>
+  </div>
+</div>
+
+<div class="publication-entry">
+  <div class="publication-entry-media">
     <a href="/images/layert2v.png" aria-label="Preview LayerT2V image">
       <img src="/images/layert2v.png" alt="LayerT2V preview">
     </a>
