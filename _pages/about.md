@@ -38,6 +38,8 @@ I am a Ph.D. student in Computer Science and Technology at [Shanghai Jiao Tong U
     <p class="publication-entry-venue">arXiv, 2603.10685</p>
     <p class="publication-entry-links">
       <a class="publication-entry-link" href="https://arxiv.org/abs/2603.10685">[paper]</a>
+      <span class="publication-entry-link--muted">[code]</span>
+      <span class="publication-entry-link--muted">[project page]</span>
     </p>
   </div>
 </div>
@@ -54,6 +56,7 @@ I am a Ph.D. student in Computer Science and Technology at [Shanghai Jiao Tong U
     <p class="publication-entry-venue">arXiv, 2508.04228</p>
     <p class="publication-entry-links">
       <a class="publication-entry-link" href="https://arxiv.org/abs/2508.04228">[paper]</a>
+      <span class="publication-entry-link--muted">[code]</span>
       <a class="publication-entry-link" href="https://layert2v.github.io/">[project page]</a>
     </p>
   </div>
