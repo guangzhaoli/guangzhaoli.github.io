@@ -18,6 +18,8 @@ I am a Ph.D. student in Computer Science and Technology at [Shanghai Jiao Tong U
 
 # 🔥 News
 
+- [06/2026] One paper has been accepted by European Conference on Computer Vision (ECCV) 2026.
+- [06/2026] One paper has been accepted by IEEE Transactions on Circuits and Systems for Video Technology (TCSVT).
 - [05/2026] Two papers have been submitted to NeurIPS 2026. Wish us luck!
 - [05/2026] One paper has been accepted by ICML 2026.
 - [03/2026] Excited to release <span class="news-highlight">A<sup>2</sup>Edit</span>, a reference-image-guided framework for image restoration and editing with powerful generative capabilities. It has been submitted to ECCV 2026.
@@ -65,7 +67,7 @@ I am a Ph.D. student in Computer Science and Technology at [Shanghai Jiao Tong U
   <div class="publication-entry-body">
     <p class="publication-entry-title">A<sup>2</sup>-Edit: Precise Reference-Guided Image Editing of Arbitrary Objects and Ambiguous Masks</p>
     <p class="publication-entry-authors">Huayu Zheng, <strong>Guangzhao Li</strong>, Baixuan Zhao, Siqi Luo, Hantao Jiang, Guangtao Zhai, Xiaohong Liu<sup>&dagger;</sup></p>
-    <p class="publication-entry-venue">arXiv, 2603.10685</p>
+    <p class="publication-entry-venue">European Conference on Computer Vision (ECCV) 2026</p>
     <p class="publication-entry-links">
       <a class="publication-entry-link" href="https://arxiv.org/abs/2603.10685">[paper]</a>
       <span class="publication-entry-link--muted">[code]</span>
@@ -119,6 +121,6 @@ I am a Ph.D. student in Computer Science and Technology at [Shanghai Jiao Tong U
   <div class="publication-entry-body">
     <p class="publication-entry-title">SceneVLP: Augmenting Vision-Language Pre-Training Models for Video Action Recognition with Video Scene Graphs</p>
     <p class="publication-entry-authors">Liangzhen Liu<sup>*</sup>, <strong>Guangzhao Li</strong><sup>*</sup>, Qi Xie, Zhaowen Wang, Li Kuang<sup>&dagger;</sup>, Yingjie Xia, Jianwei Yin</p>
-    <p class="publication-entry-venue">Under review at IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)</p>
+    <p class="publication-entry-venue">IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)</p>
   </div>
 </div>
