@@ -88,7 +88,7 @@ I am a Ph.D. student in Computer Science and Technology at [Shanghai Jiao Tong U
     <p class="publication-entry-venue">International Conference on Machine Learning (ICML) 2026</p>
     <p class="publication-entry-links">
       <a class="publication-entry-link" href="https://arxiv.org/abs/2508.04228">[paper]</a>
-      <span class="publication-entry-link--muted">[code]</span>
+      <a class="publication-entry-link" href="https://github.com/guangzhaoli/LayerT2V">[code]</a>
       <a class="publication-entry-link" href="https://layert2v.github.io/">[project page]</a>
     </p>
   </div>
